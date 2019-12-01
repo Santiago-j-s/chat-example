@@ -8,9 +8,11 @@ import (
 	"flag"
 	"log"
 	"net/http"
+    "os"
 )
 
-var addr = flag.String("addr", ":3007", "http service address")
+var port = os.Getenv("PORT") 
+var addr = flag.String("addr", ":" + port, "http service address")
 
 func serveHome(w http.ResponseWriter, r *http.Request) {
 	log.Println(r.URL)
