@@ -10,5 +10,7 @@
 		}
 	],
 	"rootPath": "github.com/santiago-j-s/chat-example",
-    "heroku.goVersion": "go1.13.4"
+    "heroku": {
+        "goVersion": "go1.13.4"
+    }
 }
