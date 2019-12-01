@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "ajAqUByI39Sfm99F/ZNOguPP3Mk=",
+			"path": "github.com/gorilla/websocket",
+			"revision": "c3e18be99d19e6b3e8f1559eea2c161a665c4b6b",
+			"revisionTime": "2019-08-25T01:20:11Z"
+		}
+	],
+	"rootPath": "github.com/santiago-j-s/chat-example"
+}
