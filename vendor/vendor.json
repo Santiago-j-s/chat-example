@@ -9,5 +9,6 @@
 			"revisionTime": "2019-08-25T01:20:11Z"
 		}
 	],
-	"rootPath": "github.com/santiago-j-s/chat-example"
+	"rootPath": "github.com/santiago-j-s/chat-example",
+    "heroku.goVersion": "go1.13.4"
 }
