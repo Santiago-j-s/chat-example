@@ -30,12 +30,19 @@ func serveHome(w http.ResponseWriter, r *http.Request) {
 func main() {
 	flag.Parse()
 	hub := newHub()
+
 	go hub.run()
+
+	fs := http.FileServer(http.Dir("assets/"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
+
 	http.HandleFunc("/", serveHome)
 	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
 		serveWs(hub, w, r)
 	})
+
 	err := http.ListenAndServe(*addr, nil)
+
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
 	}
